@@ -1,0 +1,268 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f6; /* Softer background for modern feel */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0062E6, #33Aeff);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    margin-top: 10px;   
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ffd700;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Flash messages */
+.flash.success { color: #28a745; font-weight: 600; }
+.flash.danger { color: #dc3545; font-weight: 600; }
+.flash.info { color: #17a2b8; font-weight: 600; }
+
+/* Login Box */
+.login-box {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #0062E6;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px; 
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #0062E6;
+    box-shadow: 0 0 8px rgba(0, 98, 230, 0.2);
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    background-color: #0062E6;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Task Box */
+.task-box {
+    max-width: 750px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.task-box:hover {
+    transform: translateY(-2px);
+}
+
+/* Task Form */
+.task-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.task-form input[type='text'] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.task-form input[type='text']:focus {
+    border-color: #33Aeff;
+    box-shadow: 0 0 8px rgba(51, 174, 255, 0.2);
+}
+
+/* Task Table */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.task-table th, .task-table td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.task-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+/* Delete Button */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Status Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.badge.pending { background-color: #ffc107; }
+.badge.working { background-color: #17a2b8; }
+.badge.done { background-color: #28a745; }
+
+/* Small Buttons */
+.btn-small {
+    font-size: 12px;
+    padding: 6px 12px;
+    border: none;
+    background-color: #6c767d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #495057;
+    transform: scale(1.05);
+}
+
+/* Clear Button */
+.btn-clear {
+    background-color: #dc3545;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-clear:hover {
+    background-color: #c82333;
+    transform: scale(1.03);
+}
